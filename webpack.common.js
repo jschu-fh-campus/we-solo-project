@@ -20,5 +20,21 @@ module.exports = {
       title: "Basic Webpack Setup",
       template: path.resolve(__dirname, './src/index.html'),
     })
-  ]
+  ],
+  // Integrate Babel in the build process
+  // Define which files to use the loader
+  module: {
+    // configuration regarding modules
+    rules: [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/, // files to exclude
+        use: ['babel-loader']
+      }
+    ]
+  },
+  resolve: {
+    // options for resolving module requests
+    extensions: ['*', '.js']  // files to load
+  }
 };
