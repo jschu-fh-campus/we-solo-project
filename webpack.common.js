@@ -29,7 +29,7 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/, // files to exclude
-        use: ['babel-loader']
+        use: ['babel-loader', 'eslint-loader']
       }
     ]
   },
