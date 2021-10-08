@@ -6,7 +6,7 @@ module.exports = {
   // Use the src/index.js file as entry point to bundle it.
   // If the src/index.js file imports other JS files,
   // bundle them as well
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: path.resolve(__dirname, './src/index.ts'),
   // The bundles source code files shall result in a bundle.js file
   // in the /dist folder
   output: {
@@ -28,22 +28,28 @@ module.exports = {
     rules: [
       {
         test: /\.(js)$/,
-        exclude: /node_modules/, // files to exclude
+        include: path.resolve(__dirname, 'src'),
         use: ['babel-loader', 'eslint-loader']
       },
       // CSS and SASS
       {
         test: /\.(scss|css)$/,  // load files that end with scss and css
+        include: path.resolve(__dirname, 'src'),
         use: [
           'style-loader',
           'css-loader',
           'sass-loader',
         ],
       },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: 'ts-loader',
+      },
     ]
   },
   resolve: {
     // options for resolving module requests
-    extensions: ['*', '.js']  // files to load
+    extensions: ['*', '.js', '.ts']  // files to load
   }
 };
