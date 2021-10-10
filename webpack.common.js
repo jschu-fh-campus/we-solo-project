@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 
 module.exports = {
-  // Use the src/index.js file as entry point to bundle it.
-  // If the src/index.js file imports other JS files,
+  // Use the src/scripts/index.js file as entry point to bundle it.
+  // If the src/scripts/index.js file imports other JS files,
   // bundle them as well
-  entry: path.resolve(__dirname, './src/index.ts'),
+  entry: path.resolve(__dirname, './src/scripts/index.ts'),
   // The bundles source code files shall result in a bundle.js file
   // in the /dist folder
   output: {
@@ -17,9 +17,19 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin,
     new HtmlWebpackPlugin({
-      title: "Basic Webpack Setup",
-      template: path.resolve(__dirname, './src/index.html'),
-    })
+      title: "Pokemon List",
+      template: path.resolve(__dirname, './src/pages/index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Favourites',
+      template: path.resolve(__dirname, './src/pages/favourites.html'),
+      filename: 'favourites.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Random Form',
+      template: path.resolve(__dirname, './src/pages/random-form.html'),
+      filename: 'random-form.html',
+    }),
   ],
   // Integrate Babel in the build process
   // Define which files to use the loader
