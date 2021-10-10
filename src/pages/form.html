@@ -12,6 +12,25 @@
 
     <main id="main-form" class="px-4">
       <section class="max-w-screen-lg mx-auto">
+        <form id="form" method="get">
+          <div class="mt-2">
+            <label for="textfield" class="block">Textfield: (only letters, at least 5)</label>
+            <input type="text" id="textfield" name="textfield" class="border-solid border-2 border-black"/>
+          </div>
+          <div class="mt-2">
+            <label for="number">Number: (only numbers, at least 1)</label><br />
+            <input type="text" id="number" name="number" class="border-solid border-2 border-black"/><br />
+          </div>
+          <div class="mt-2">
+            <label for="password">Password (should begin with a number)</label><br />
+              <input type="password" id="password" name="password" class="border-solid border-2 border-black"/><br />
+          </div>
+          <div class="mt-2">
+            <label for="email">Email: (should contain @)</label><br />
+            <input type="text" id="email" name="email" class="border-solid border-2 border-black"/><br />
+          </div>
+          <input type="submit" value="Submit" id="submit" class="bg-purple-500 text-white rounded cursor-pointer px-4 py-2 mt-4"/>
+        </form>
       </section>
     </main>
   </body>
