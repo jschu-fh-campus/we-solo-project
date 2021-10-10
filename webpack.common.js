@@ -17,13 +17,13 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin,
     new HtmlWebpackPlugin({
-      title: "Pokemon List",
+      title: "Items",
       template: path.resolve(__dirname, './src/pages/index.html'),
     }),
     new HtmlWebpackPlugin({
-      title: 'Random Form',
-      template: path.resolve(__dirname, './src/pages/random-form.html'),
-      filename: 'random-form.html',
+      title: 'Form',
+      template: path.resolve(__dirname, './src/pages/form.html'),
+      filename: 'form.html',
     }),
     new HtmlWebpackPlugin({
       title: 'Github',

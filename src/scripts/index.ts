@@ -3,7 +3,7 @@ import '../styles/style.scss';
 
 import setupHeader from './header';
 import setupItemList from './items';
-import setupRandomFrom from './random-form';
+import setupFrom from './form';
 
 window.addEventListener('load', () => {
   setupHeader();
@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
     setupItemList();
   }
 
-  if (document.getElementById('main-random-form') != null) {
-    setupRandomFrom();
+  if (document.getElementById('main-form') != null) {
+    setupFrom();
   }
 });
