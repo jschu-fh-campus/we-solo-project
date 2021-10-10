@@ -1,3 +1,4 @@
+import './styles/tailwind.css';
 import './styles/style.scss';
 
 function testTypeScript(x: number): void {
