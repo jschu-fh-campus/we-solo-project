@@ -21,14 +21,14 @@ module.exports = {
       template: path.resolve(__dirname, './src/pages/index.html'),
     }),
     new HtmlWebpackPlugin({
-      title: 'Favourites',
-      template: path.resolve(__dirname, './src/pages/favourites.html'),
-      filename: 'favourites.html',
-    }),
-    new HtmlWebpackPlugin({
       title: 'Random Form',
       template: path.resolve(__dirname, './src/pages/random-form.html'),
       filename: 'random-form.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Github',
+      template: path.resolve(__dirname, './src/pages/github.html'),
+      filename: 'github.html',
     }),
   ],
   // Integrate Babel in the build process

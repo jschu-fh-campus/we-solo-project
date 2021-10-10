@@ -7,8 +7,8 @@ export default function setupHeader() {
         <nav class="h-full flex items-center justify-between pt-4 pb-12">
             <ul class="h-full flex justify-end items-center">
                 <li class="pr-3 bg-yellow-300"><a href="index.html">Items</a></li>
-                <li class="pr-3 bg-yellow-300"><a href="favourites.html">Favourites</a></li>
                 <li class="pr-3 bg-yellow-300"><a href="random-form.html">Random Form</a></li>
+                <li class="pr-3 bg-yellow-300"><a href="github.html">Github</a></li>
             </ul>
         </nav>`;
     }
